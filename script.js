@@ -46,7 +46,7 @@ function gameLoop() {
   ctx.fillRect(apple.x * gridSize, apple.y * gridSize, gridSize - 2, gridSize - 2);
 }
 
-setInterval(gameLoop, 150);
+setInterval(gameLoop, 300);
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowUp" && dy === 0) { dx = 0; dy = -1; }
