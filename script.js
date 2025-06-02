@@ -1,8 +1,8 @@
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
-const eatSound = new Audio("Nom Nom Nom sound effect.wav");
-const gameOverSound = new Audio("Wilhelm Scream - Sound Effect.wav");
+const eatSound = new Audio("eat.wav");
+const gameOverSound = new Audio("die.wav");
 
 const gridSize = 20;
 const tileCount = canvas.width / gridSize;
