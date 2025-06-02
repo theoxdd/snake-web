@@ -9,8 +9,8 @@ let apple = { x: 5, y: 5 };
 let dx = 1;
 let dy = 0;
 
-const eatSound = new Audio("eat.wav");
-const gameOverSound = new Audio("gameover.wav");
+const eatSound = new Audio("eat.mp3");
+const gameOverSound = new Audio("gameover.mp3");
 let soundEnabled = false;
 
 document.addEventListener("keydown", () => {
