@@ -1,6 +1,9 @@
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
+const eatSound = new Audio("Nom Nom Nom sound effect.wav");
+const gameOverSound = new Audio("Wilhelm Scream - Sound Effect.wav");
+
 const gridSize = 20;
 const tileCount = canvas.width / gridSize;
 
@@ -17,6 +20,7 @@ function gameLoop() {
     head.x >= tileCount || head.y >= tileCount ||
     snake.some(segment => segment.x === head.x && segment.y === head.y)
   ) {
+      gameOverSound.play(); 
     alert("Game Over!");
     snake = [{ x: 10, y: 10 }];
     dx = 1; dy = 0;
@@ -26,6 +30,7 @@ function gameLoop() {
   snake.unshift(head);
 
   if (head.x === apple.x && head.y === apple.y) {
+     eatSound.play(); 
     apple = {
       x: Math.floor(Math.random() * tileCount),
       y: Math.floor(Math.random() * tileCount)
